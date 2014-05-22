@@ -63,9 +63,10 @@ public class OI {
         new JoystickButton(xbox1, XboxController.ButtonType.kL.value).whileHeld(new ConveyorDown());
         new JoystickButton(xbox1, XboxController.ButtonType.kStart.value).whileHeld(new LightsOn());
         
-        // Use default command not trigger on press
-        // new JoystickButton(xbox1, XboxController.AxisType.kDLeftRight.value).whileHeld(new MoveArm());    
-        // new JoystickButton(xbox1, XboxController.AxisType.kTrigger.value).whileHeld(new ShooterControl());
+        // Move the bridge arm manually by moving setpoint with DPad
+        new JoystickButton(xbox1, XboxController.ButtonType.kBack.value).whenPressed(new MoveArm());
+        
+        new JoystickButton(xbox1, XboxController.AxisType.kTrigger.value).whileHeld(new ShooterControl());
     }
     
 }

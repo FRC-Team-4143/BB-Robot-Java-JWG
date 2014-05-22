@@ -28,7 +28,7 @@ public class  ArcadeDrive extends Command {
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        Robot.drivetrain.arcadeDrive(Robot.oi.xbox1.getX(GenericHID.Hand.kLeft),Robot.oi.xbox1.getY(GenericHID.Hand.kLeft));
+        Robot.drivetrain.arcadeDrive(Robot.oi.xbox1.getX(GenericHID.Hand.kLeft),-Robot.oi.xbox1.getY(GenericHID.Hand.kLeft));
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

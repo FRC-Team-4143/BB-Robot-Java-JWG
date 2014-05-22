@@ -12,6 +12,7 @@ import org.usfirst.frc8889.BBJWG.RobotMap;
 import org.usfirst.frc8889.BBJWG.commands.*;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 /**
  *
  */
@@ -34,5 +35,6 @@ public class Drivetrain extends Subsystem {
     }
      public void arcadeDrive(double Y, double X) {
         robotDrive.arcadeDrive(Y, X);
+        // SmartDashboard.putNumber("Speed Dial", X);
     }
 }
